@@ -71,7 +71,15 @@ We will evaluate:
 - precision of small code changes,
 - clarity of written and spoken explanations.
 
-We will not reward large rewrites that ignore the existing architecture.
+We will not reward large rewrites that ignore the existing architecture. The following rubric will be used for evaluation.
+
+| Area                        | Weight |
+| --------------------------- | ------ |
+| Codebase comprehension      | 20%    |
+| Quality of reasoning        | 20%    |
+| Extent of tasks responded   | 20%    |
+| Presentaion clarity         | 20%    |
+| Submission punctuality      | 20%    |
 
 ## Submission principles
 
