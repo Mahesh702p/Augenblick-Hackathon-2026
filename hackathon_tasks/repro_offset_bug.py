@@ -29,6 +29,8 @@ def test_offset_bug():
         def get_vocab(self): return vocab
         def get_vocab_size(self): return len(vocab)
         def save(self, d): pass
+        @classmethod
+        def load(cls, d): return cls()
 
     tokenizer = AugenblickTokenizer(
         model=MockBPE(),

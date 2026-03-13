@@ -1,0 +1,4 @@
+# file: /home/mahesh/Desktop/CodeBase/AUGENBLICK-HACKATHON-2026/src/abctokz/constants.py
+# hypothesis_version: 6.151.9
+
+[0.75, 0.9995, 128, 1000, 2304, 2431, 7376, 7423, 8000, 43232, 43263, '##', '%Y-%m-%d %H:%M:%S', '</s>', '<cls>', '<mask>', '<pad>', '<s>', '<sep>', '<unk>', 'config.json', 'manifest.json', 'merges.txt', 'pieces.json', 'special_tokens.json', 'vocab.json']

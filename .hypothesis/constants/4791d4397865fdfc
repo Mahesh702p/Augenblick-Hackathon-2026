@@ -1,0 +1,4 @@
+# file: /home/mahesh/Desktop/CodeBase/AUGENBLICK-HACKATHON-2026/src/abctokz/normalizers/whitespace.py
+# hypothesis_version: 6.151.9
+
+['[ \\t\\r\\f\\v]+', '\\n{2,}']

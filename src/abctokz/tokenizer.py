@@ -126,15 +126,21 @@ class AugenblickTokenizer:
                 start_pos = cursor
 
             pairs = self._model.tokenize(pre_tok)
-            char_offset = start_pos
+            sub_cursor = start_pos
             for tok_str, tok_id in pairs:
-                tok_len = len(tok_str.lstrip("##"))  # strip continuation prefix for offset
+                # Calculate sub-token length (strip ## prefix if present)
+                display_tok = tok_str.removeprefix("##")
+                tok_len = len(display_tok)
+                
                 ids.append(tok_id)
                 tokens.append(tok_str)
-                offsets.append((char_offset, char_offset + len(pre_tok)))
+                offsets.append((sub_cursor, sub_cursor + tok_len))
+                
                 is_special = int(tok_str in self._special_tokens)
                 special_mask.append(is_special)
                 attention_mask.append(1)
+                
+                sub_cursor += tok_len
 
             cursor = start_pos + len(pre_tok)
 
@@ -183,10 +189,10 @@ class AugenblickTokenizer:
         tokens = [inv_vocab.get(i, "") for i in ids]
         if skip_special_tokens:
             special_strs = set(self._special_tokens.keys())
-            # Also skip tokens that look like <special>
+            # Only skip tokens that are explicitly listed in our registry
             tokens = [
                 t for t in tokens
-                if t and not (t in special_strs or (t.startswith("<") and t.endswith(">")))
+                if t and t not in special_strs
             ]
         return self._decoder.decode(tokens)
 
