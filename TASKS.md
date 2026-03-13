@@ -53,7 +53,7 @@ You may not:
 - submit benchmark values you did not generate,
 - claim behavior you did not verify.
 
-**You must report the report the following in google form submission**
+**You must report the following in google form submission**
 - List of AI tools, or LLMs that you used.
 - Total number of tokens used for all tasks, across all tools, across all models and all team mates. All AI tools provide a way to track the input and output tokens. Ensure that you keep a count of total tokens. This should not be an estimate and should be an accurate number. (E.g. Do not write approx. 5 million, instead 510,201 tokens)
 
@@ -78,7 +78,7 @@ We will not reward large rewrites that ignore the existing architecture. The fol
 | Codebase comprehension      | 20%    |
 | Quality of reasoning        | 20%    |
 | Extent of tasks responded   | 20%    |
-| Presentaion clarity         | 20%    |
+| Presentation clarity        | 20%    |
 | Submission punctuality      | 20%    |
 
 ## Submission principles
@@ -106,7 +106,7 @@ Instead, show what happens in this repository and why.
 
 - Submit the .md file by uploading to the google form submission. 
 - Prepare the slides as per the template given in the folder. Upload the presentation in the submission form too.
-- Ensure that you submit the form latest by 0600 Hours IST on 14-03-2026. LATE SUBMISSIONS WILL BE PENLIZED. 
+- Ensure that you submit the form latest by 0600 Hours IST on 14-03-2026. LATE SUBMISSIONS WILL BE PENALIZED. 
 ---
 
 ### Final note

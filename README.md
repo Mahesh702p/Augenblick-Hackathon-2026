@@ -9,7 +9,7 @@ abctokz is an in-house library and is not available on PyPI. Install directly fr
 
 ```bash
 git clone <repo>
-cd tokenizer_repo
+cd AUGENBLICK-HACKATHON-2026
 pip install -e .                 # core (development install)
 pip install -e ".[adapters]"     # + HF tokenizers + SentencePiece
 pip install -e ".[dev]"          # + testing tools
