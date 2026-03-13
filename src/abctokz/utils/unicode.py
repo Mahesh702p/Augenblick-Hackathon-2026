@@ -78,7 +78,8 @@ def grapheme_clusters(text: str) -> list[str]:
     clusters: list[str] = []
     buf = ""
     for char in text:
-        if is_combining(char) and buf:
+        # IMPROVEMENT: Also attach zero-width characters (ZWJ/ZWNJ) to the cluster
+        if (is_combining(char) or is_zero_width(char)) and buf:
             buf += char
         else:
             if buf:

@@ -1,7 +1,14 @@
+import sys
+from pathlib import Path
+
+# Add src to sys.path
+current_dir = Path(__file__).parent.resolve()
+SRC_ROOT = (current_dir.parent / "src").resolve()
+sys.path.append(str(SRC_ROOT))
+
 from abctokz import Tokenizer
 from abctokz.config.defaults import bpe_multilingual
 import tempfile
-from pathlib import Path
 
 # Create a small multilingual corpus for training
 corpus = [
