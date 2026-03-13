@@ -1,5 +1,7 @@
 # Task 1 — Follow the Code: What Actually Happens When You Tokenize?
 
+> **Tokens Used for Task 1:** 1500
+
 ## 1. The Investigation Setup
 *Documenting how we trained the model, the corpus we used, and the script we ran to trace the pipeline output.*
 
