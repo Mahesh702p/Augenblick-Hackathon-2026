@@ -1,4 +1,0 @@
-# file: /home/mahesh/Desktop/CodeBase/AUGENBLICK-HACKATHON-2026/src/abctokz/pretokenizers/punctuation.py
-# hypothesis_version: 6.151.9
-
-['(\\p{P})', 'P', '\\p{P}+', 'isolated', 'merged_with_next', 'merged_with_previous']

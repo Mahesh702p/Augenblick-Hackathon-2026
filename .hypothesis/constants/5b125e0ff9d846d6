@@ -1,4 +1,0 @@
-# file: /home/mahesh/Desktop/CodeBase/AUGENBLICK-HACKATHON-2026/src/abctokz/types.py
-# hypothesis_version: 6.151.9
-
-['ArtifactMetadata', 'Encoding', 'SpecialToken', 'attention_mask', 'checksum', 'content', 'created_at', 'description', 'elapsed_seconds', 'extra', 'fertility', 'id', 'ids', 'language', 'languages', 'lstrip', 'model_type', 'n_sentences', 'normalized', 'offsets', 'rstrip', 'schema_version', 'single_word', 'special_tokens_mask', 'throughput_sps', 'tokenizer_name', 'tokens', 'unk_rate', 'vocab_size']

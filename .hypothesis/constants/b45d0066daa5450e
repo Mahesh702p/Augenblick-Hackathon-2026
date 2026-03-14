@@ -1,4 +1,0 @@
-# file: /home/mahesh/Desktop/CodeBase/AUGENBLICK-HACKATHON-2026/src/abctokz/tokenizer.py
-# hypothesis_version: 6.151.9
-
-['##', 'AugenblickTokenizer', 'Z', '_PlaceholderModel', 'bpe', 'model_type', 'schema_version', 'unigram', 'unknown', 'utf-8', 'vocab.json', 'wordlevel']

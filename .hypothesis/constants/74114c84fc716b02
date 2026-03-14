@@ -1,4 +1,0 @@
-# file: /home/mahesh/Desktop/CodeBase/AUGENBLICK-HACKATHON-2026/src/abctokz/config/schemas.py
-# hypothesis_version: 6.151.9
-
-[0.0, 1.0, 1000, '1', '<pad>', '<s>', 'TokenizerConfig', 'after', 'benchmarks/outputs', 'bpe', 'devanagari', 'devanagari_aware', 'extra', 'forbid', 'frozen', 'identity', 'isolated', 'merged_with_next', 'merged_with_previous', 'nfkc', 'punctuation', 'regex', 'sequence', 'unigram', 'whitespace', 'wordlevel']
