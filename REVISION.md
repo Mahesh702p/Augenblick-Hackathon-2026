@@ -186,3 +186,63 @@ Character position mapping. Token "h" at offset (0,1) means it came from charact
 
 **If a judge asks "Why not all 20?":**
 > *"We focused on depth over breadth. Instead of shallow answers for 20 tasks, we did deep analysis on 16 — including finding and patching 3 actual bugs. We believe understanding 16 tasks thoroughly is more valuable than surface-level answers for all 20."*
+
+---
+
+## PART 8: HOW TO RUN THE CLI COMMANDS
+
+If the judges ask you to physically run the code, here are the exact commands you need. Note: Always run these from the project root directory `AUGENBLICK-HACKATHON-2026` with your virtual environment activated (`source .venv/bin/activate`).
+
+### 1. Training a Model
+You can train a tokenizer by passing inline arguments (corpus, model type, vocab size).
+
+```bash
+# Train a BPE model with a vocabulary of 400 on the National Anthem data
+abctokz train --corpus data/national_anthem.txt --model bpe --vocab-size 400 --output artifacts/bpe_demo
+```
+
+**Alternative (using a config file):**
+```bash
+abctokz train --config configs/bpe_hi_mr_sd_en.yaml
+```
+
+### 2. Encoding Text (Testing the Model)
+Once a model is trained and saved to a directory (e.g., `artifacts/bpe_demo`), you can test how it splits text.
+
+```bash
+# See the visual table of tokens and IDs for a specific string
+abctokz encode --model artifacts/bpe_demo --text "जन गण मन अधिनायक" --offsets
+
+# Keep it clean: Print only the IDs
+abctokz encode --model artifacts/bpe_demo --text "जन गण मन" --ids
+
+# Encode every line in a file
+abctokz encode --model artifacts/bpe_demo --input data/national_anthem.txt
+```
+
+### 3. Decoding IDs Back to Text
+To test the decoder, pass the raw numeric IDs back in.
+
+```bash
+# Pass space-separated IDs to see the reconstructed text
+abctokz decode --model artifacts/bpe_demo --ids "42 189 67 91 103"
+```
+
+### 4. Running Benchmarks
+If you want to run the automated tests comparing multiple models on a corpus:
+
+```bash
+# Run benchmark on English+Hindi text comparing BPE and Unigram
+abctokz benchmark --corpus data/national_anthem.txt --model artifacts/bpe_demo --model artifacts/unigram_demo --name "Hackathon Test"
+```
+
+### 5. Running the Test Suite
+To prove the 157 passing tests to the judges:
+
+```bash
+# Run all tests quietly
+pytest tests/ -q
+
+# Run all tests with full detail
+pytest tests/ -v
+```
